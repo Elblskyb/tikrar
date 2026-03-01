@@ -2,33 +2,20 @@
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>تِكْرَارْ</title>
-    
-    <!-- تحميل مكتبة Tailwind CSS للتنسيق -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- تحميل الخط العربي (Noto Sans Arabic) -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700;900&display=swap" rel="stylesheet">
-    
     <style>
-      /* تطبيق الخط العربي على كل التطبيق ومنع التمرير الجانبي */
-      * { 
-        font-family: 'Noto Sans Arabic', sans-serif; 
-      }
-      body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        background-color: #F8FAF5;
-      }
+      * { font-family: 'Noto Sans Arabic', sans-serif; -webkit-tap-highlight-color: transparent; }
+      body { background-color: #F8FAF5; margin: 0; padding: 0; overflow-x: hidden; }
+      input[type=range] { direction: rtl; }
+      .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background: #E2E8F0; border-radius: 10px; }
     </style>
   </head>
   <body>
-    <!-- هذا هو المكان الذي سيظهر فيه تطبيق React -->
     <div id="root"></div>
-    
-    <!-- ربط ملف البرمجة الرئيسي -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
